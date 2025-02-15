@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Login</title>
+    <link rel="stylesheet" href="adminlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+          <ul>
+            <a id="logo"><li> Bloomers</li></a>
+            <div class="others">
+              <div class="options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Categories_Cart/Categories.html">Categories</a></li>
+                <li><a href="about_us.html">AboutUs</a></li>
+                <li><a href="Campaign.html">Campaign</a></li>
+                <li><a href="Donation/donation.html">Donation</a></li>
+              </div>
+              <div class="icons">
+                <a href="login.html"><li><i class="fa-regular fa-user"></i></a></li>
+                <a href="adminlogin.html"><li><i class="fa-solid fa-user-nurse"></i></a></li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </header>
+<div class="body2">
+    <div class="login-container">
+        <h2>ADMIN LOGIN</h2>
+        <form id="loginForm" onsubmit="return login()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" onclick="window.location.href='admin.html';">Login</button>
+        </form>
+    </div>
+
+    <script src="adminlogin.js"></script>
+</div>
+</body>
+</html>

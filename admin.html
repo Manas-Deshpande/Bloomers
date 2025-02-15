@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Nursery Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/dbed6b6114.js" cro
+  ssorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVBAR STARTS -->
+  <div class="header1">
+    <div class="navbar">
+      <ul>
+        <a id="logo"><li> Bloomers</li></a>
+        <div class="others">
+          <div class="options">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Categories_Cart/Categories.html">Categories</a></li>
+            <li><a href="about_us.html">AboutUs</a></li>
+            <li><a href="Campaign.html">Campaign</a></li>
+            <li><a href="Donation/donation.html">Donation</a></li>
+          </div>
+          <div class="icons">
+            <a href="login.html"><li><i class="fa-regular fa-user"></i></a></li>
+            <a href="adminlogin.html"><li><i class="fa-solid fa-user-nurse"></i></a></li>
+          </div>
+        </div>
+      </ul>
+    </div>
+</div>
+<br><br><br><br><br>
+  <!-- NAVBAR ENDS -->
+
+
+    <div class="container">
+        <header> 
+            <h1>  Bloomers Admin Dashboard</h1>
+        </header>
+
+        <div class="dashboard">
+            <div class="card">
+                <h3>Total Users Logged In</h3>
+                <p id="users-loggedin">120</p>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Total Campaigns Joined</h3>
+                <p id="campaigns-joined">75</p>
+            </div>
+            <div class="card">
+                <h3>Total Feedback</h3>
+                <p id="feedback-details">50</p>
+            </div>
+            <div class="card">
+                <h3>Total Donation</h3>
+                <p id="Total-donation">500 Rs</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h3>Monthly Campaigns Joined</h3>
+            <canvas id="ordersChart"></canvas>
+        </div>
+    </div>
+
+
+
+    <script>
+        const ctx = document.getElementById('ordersChart').getContext('2d');
+        const ordersChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Number of campaigns joined',
+                    data: [15, 20, 30, 25, 40, 60, 75, 80, 55, 65, 45, 70],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+<br>
+<br>
+<br>
+<br> 
+
+
+    <div class="btn">
+    <form action="userdata.jsp" method="post">
+<button>
+    User Details
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+
+    </div>
+</button>
+</form>
+<form action="campaigndata.jsp" method="post">
+<button>
+    Total campaign Details
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+
+    </div>
+</button>
+</form>
+<form action="feedbackdata.jsp" method="post">
+<button>
+    Feedback Details
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+    </div>
+</button>
+</form>
+<form action="donationdata.jsp" method="post">
+<button>
+     Donation Details
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+
+    </div>
+</button>
+</form>
+    </div>
+</body>
+</html>
